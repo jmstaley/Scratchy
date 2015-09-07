@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         EditText textEdit = (EditText) findViewById(R.id.note);
         textEdit.setText(getContent());
+        textEdit.setSelection(textEdit.getText().length());
+
+        if(textEdit.requestFocus()) {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
     }
 
     @Override
