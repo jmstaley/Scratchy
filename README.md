@@ -1,3 +1,5 @@
+Moved to https://codeberg.org/jmstaley/Scratchy
+
 Scratchy
 ========
 
